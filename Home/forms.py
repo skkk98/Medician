@@ -9,7 +9,7 @@ class RegisterForm(forms.Form):
     password = forms.CharField(widget=forms.PasswordInput, min_length=8)
     confirm_password = forms.CharField(widget=forms.PasswordInput)
     Type = forms.CharField(widget=forms.Select(choices=(('Doctor','DOCTOR'),('Patient','PATIENT'))))
-    specialization = forms.CharField(widget=forms.Select(choices=(('Pathologist','PATHOLOGIST'), ('Radiologist', 'RADIOLOGIST'),('Obstetrician', 'OBSTETRICIAN'),('Cardiologist','CARDIOLOGIST'),('', '---------'))), required=False)
+    specialization = forms.CharField(widget=forms.Select(choices=(('Pathologist','PATHOLOGIST'), ('Radiologist', 'RADIOLOGIST'),('Obstetrician', 'OBSTETRICIAN'),('Cardiologist','CARDIOLOGIST'),('Endocrinologist','ENDOCRINOLOGIST'),('', '---------'))), required=False)
     class Meta:
         model = User, Detailuser
         fields = ['username', 'name', 'email', 'password', 'confirm_password', 'Type', 'specialization']
@@ -18,7 +18,7 @@ class LoginForm(forms.Form):
     username = forms.CharField(max_length=50)
     password = forms.CharField(widget=forms.PasswordInput)
     Type = forms.CharField(widget=forms.Select(choices=(('Doctor','DOCTOR'),('Patient','PATIENT'))))
-    specialization = forms.CharField(widget=forms.Select(choices=(('Pathologist','PATHOLOGIST'), ('Radiologist', 'RADIOLOGIST'),('Obstetrician', 'OBSTETRICIAN'),('Cardiologist','CARDIOLOGIST'),('', '---------'))), required=False)
+    specialization = forms.CharField(widget=forms.Select(choices=(('Pathologist','PATHOLOGIST'), ('Radiologist', 'RADIOLOGIST'),('Obstetrician', 'OBSTETRICIAN'),('Cardiologist','CARDIOLOGIST'),('Endocrinologist','ENDOCRINOLOGIST'),('', '---------'))), required=False)
     class Meta:
         model = User, Detailuser
         fields = ['username', 'password', 'Type', 'specialization']

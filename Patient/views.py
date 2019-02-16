@@ -44,4 +44,5 @@ class profile(View):
             y=ML.training(data1)
             print(y)
 
-            return HttpResponse('successfull')
+
+            return render(request, 'result.html', {'y':y[0]})

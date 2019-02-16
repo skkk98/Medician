@@ -139,7 +139,7 @@ def training(sample):
     pkl_filename = "pickle_model.pkl"
     with open(pkl_filename, 'wb') as file:
         pickle.dump(rf, file)
-
+    return y_predicted
 
 def predict(data):
     pkl_filename = "pickle_model.pkl"
@@ -156,7 +156,7 @@ def predict(data):
 
     y_predicted = rf.predict(data)
     print(y_predicted)
-
+    return y_predicted
     #score = rf.score(x_test, y_test)
     #print (score)
 

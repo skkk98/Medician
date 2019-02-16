@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from Home.views import HomePage, Register, Login
 from Patient.views import profile
+from Doctor.views import docprofile
 from django.conf.urls import url,include
 
 urlpatterns = [
@@ -25,4 +26,6 @@ urlpatterns = [
     url(r'^register/$', Register.as_view(), name='register'),
     url(r'^login/$', Login.as_view(), name='login'),
     url(r'^patient/profile/$', profile.as_view(), name='profile'),
+    url(r'^doctor/profile/$', docprofile.as_view(), name='profile'),
+
 ]
